@@ -61,6 +61,7 @@ The remaining six bits (c1-c6) specify the exact ALU operation. Below is a table
 
 ### Destination (dest) Bits (3 bits)
 Following the comp bits, three bits (from bit 5 to bit 3 of the original 16-bit instruction) specify where the result of the ALU computation should be loaded. These bits can be set independently or in combination:
+
 Destination |    Bits
 ------------------------
     Null    |     000
