@@ -37,7 +37,17 @@ If a is 1, the ALU utilizes the value stored at the memory location addressed by
 If a is 0, the ALU utilizes the value from the A register (A).
 
 The remaining six bits (c1-c6) specify the exact ALU operation. Below is a table of common comp values and their corresponding operations:
+      Bit    |   Operation  
+-----------------------------
+      0      |   A = 0 or M = 0
+      1      |   !A or !M
+      2      |   D = 0
+      3      |   !D
+      4      |   1 -> A and D or M and D, 0 -> A + D or M + D
+      5      |   !Out
 
+
+come complex operation:
   When a = 0 |   bits   | when a=1 
   --------------------------------
        0     |  101010  | 
