@@ -3,7 +3,7 @@ This project describes how a working computer was built.
 Both its Central Processing Unit (CPU) and Random Access Memory (RAM) were constructed entirely from NAND logic gates. 
 
 Project Background and Development
-The entire computer system was developed using the LogicCircuit application, a digital logic simulator available at https://www.logiccircuit.org/index.html. 
+The entire computer system was developed using the LogicCircuit application, a digital logic simulator available at https://www.logiccircuit.org/index.html. \n
 This was the final project for a computer architecture course, demonstrating practical skills in digital design.
 This project took 3 days to compelete, even though we had been given 2 months to complete.
 
