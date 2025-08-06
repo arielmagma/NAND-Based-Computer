@@ -39,22 +39,23 @@ If a is 0, the ALU utilizes the value from the A register (A).
 The remaining six bits (c1-c6) specify the exact ALU operation. Below is a table of common comp values and their corresponding operations:
 
   When a = 0 |   bits   | when a=1 
+  --------------------------------
        0     |  101010  | 
-	   1     |  111111  |
-	  -1     |  111010  |
-	   D     |  001100  |
-	   A     |  110000  |     M
-	  !D     |  001101  |
-	  !A     |  110001  |    !M 
-	  -D     |  001111  |
-	  -A     |  110011  |    -M 
-	  D+1    |  011111  |
-	  A+1    |  110111  |    M+1
-	  D-1    |  001110  |
-	  A-1    |  110010  |    M-1
-	  D+A    |  000010  |    D+M
-	  D-A    |  010011  |    D-M
-	  A-D    |  000111  |    M-D
-	  D&A    |  000000  |    D&M
-	  D|A    |  010101  |    D|M
+       1     |  111111  |
+      -1     |  111010  |
+       D     |  001100  |
+       A     |  110000  |     M
+      !D     |  001101  |
+      !A     |  110001  |    !M 
+      -D     |  001111  |
+      -A     |  110011  |    -M 
+      D+1    |  011111  |
+      A+1    |  110111  |    M+1
+      D-1    |  001110  |
+      A-1    |  110010  |    M-1
+      D+A    |  000010  |    D+M
+      D-A    |  010011  |    D-M
+      A-D    |  000111  |    M-D
+      D&A    |  000000  |    D&M
+      D|A    |  010101  |    D|M
 	   
