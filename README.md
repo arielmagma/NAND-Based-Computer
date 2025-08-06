@@ -38,9 +38,7 @@ If a is 0, the ALU utilizes the value from the A register (A).
 
 The remaining six bits (c1-c6) specify the exact ALU operation. Below is a table of common comp values and their corresponding operations:
 
- ----------------------------------
   When a = 0 |   bits   | when a=1 
- ----------------------------------
        0     |  101010  | 
 	   1     |  111111  |
 	  -1     |  111010  |
