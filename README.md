@@ -19,3 +19,43 @@ Data is handled and programs are controlled using registers and a program counte
 The memory system uses Static Random Access Memory (SRAM).  
 Different sizes of memory (like RAM8, RAM64, up to RAM16K) are built by combining smaller memory units.  
 This layered design helps the computer store and retrieve data efficiently, which is vital for its operation.  
+
+## Instruction Set Architecture
+The computer operates on a 16-bit word length, with each instruction occupying two bytes. The instruction set is divided into two primary modes, determined by the Most Significant Bit (MSB) of the instruction word.
+
+### A-Instruction (Address/Constant Loading)
+When the MSB of a 16-bit instruction is 0, the instruction is interpreted as an A-instruction. This mode is designed to load a 15-bit constant value directly into the A register. This functionality is crucial for operations requiring immediate values, such as addressing memory locations, selecting specific registers, or providing operands for arithmetic and logical operations.
+
+### C-Instruction (Computation/Control)
+When the MSB of a 16-bit instruction is 1, the instruction is interpreted as a C-instruction, signaling a computational or control operation rather than a constant load. For all C-instructions, the three most significant bits (bits 15, 14, 13) are set to 1. The remaining bits are structured as follows:
+
+### Computation (comp) Bits (7 bits)
+The subsequent seven bits define the computation to be performed by the Arithmetic Logic Unit (ALU). The most significant bit of this 7-bit segment (bit 12 of the original 16-bit instruction, often denoted as a) determines the source of one of the ALU's operands:
+
+If a is 1, the ALU utilizes the value stored at the memory location addressed by the A register (M), serving as an input.
+
+If a is 0, the ALU utilizes the value from the A register (A).
+
+The remaining six bits (c1-c6) specify the exact ALU operation. Below is a table of common comp values and their corresponding operations:
+
+  When a = 0 |   bits   | when a=1 
+ ----------------------------------
+       0     |  101010  | 
+	   1     |  111111  |
+	  -1     |  111010  |
+	   D     |  001100  |
+	   A     |  110000  |     M
+	  !D     |  001101  |
+	  !A     |  110001  |    !M 
+	  -D     |  001111  |
+	  -A     |  110011  |    -M 
+	  D+1    |  011111  |
+	  A+1    |  110111  |    M+1
+	  D-1    |  001110  |
+	  A-1    |  110010  |    M-1
+	  D+A    |  000010  |    D+M
+	  D-A    |  010011  |    D-M
+	  A-D    |  000111  |    M-D
+	  D&A    |  000000  |    D&M
+	  D|A    |  010101  |    D|M
+	   
