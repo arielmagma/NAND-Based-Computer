@@ -47,9 +47,10 @@ The remaining six bits (c1-c6) specify the exact ALU operation. Below is a table
       5      |   !Out
 
 
-come complex operation:
+More complex operation:
   --------------------------------
-  When a = 0 |   bits   | when a=1 
+  When a = 0 |   bits   | when a=1
+  --------------------------------
        0     |  101010  | 
        1     |  111111  |
       -1     |  111010  |
