@@ -58,4 +58,16 @@ The remaining six bits (c1-c6) specify the exact ALU operation. Below is a table
       A-D    |  000111  |    M-D
       D&A    |  000000  |    D&M
       D|A    |  010101  |    D|M
-	   
+
+### Destination (dest) Bits (3 bits)
+Following the comp bits, three bits (from bit 5 to bit 3 of the original 16-bit instruction) specify where the result of the ALU computation should be loaded. These bits can be set independently or in combination:
+Destination |    Bits
+------------------------
+    Null    |     000
+     A      |     100
+     AD     |     110
+     AMD    |     111
+     D      |     010
+     M      |     001
+     MD     |     011
+     AM     |     101
